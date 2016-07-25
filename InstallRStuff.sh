@@ -1,3 +1,6 @@
+#! /bin/sh
+
+echo "Begin cretate users"
 ### create some users accounts
 sudo su -c "useradd sasdemoA -p Orion123 -m"
 sudo su -c "useradd sasdemoB -p Orion123 -m"
