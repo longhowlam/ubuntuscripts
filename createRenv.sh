@@ -37,4 +37,4 @@ echo "====================== installeer R studio server ========================
 #### Rstudio Server
 apt-get -y install libapparmor1 gdebi-core
 wget https://download2.rstudio.org/rstudio-server-0.99.902-amd64.deb
-gdebi rstudio-server-0.99.902-amd64.deb
+gdebi -n rstudio-server-0.99.902-amd64.deb
