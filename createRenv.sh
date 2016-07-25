@@ -1,12 +1,6 @@
 #!/bin/bash
 clear
 
-echo "====================== Add users ====================================="
-
-useradd -m -p Orion123 -s /bin/bash sasdemoA
-useradd -m -p Orion123 -s /bin/bash sasdemoB
-useradd -m -p Orion123 -s /bin/bash sasdemoC
-
 
 echo "====================== installeer nginx ====================================="
 apt-get update
@@ -32,9 +26,27 @@ apt-get -y install libssl-dev
 #### installeer veel gebruikte R packages
 su - -c "R -e \"install.packages('devtools', repos='http://cran.rstudio.com/')\""
 su - -c "R -e \"install.packages('randomForest', repos='http://cran.rstudio.com/')\""
+su - -c "R -e \"install.packages('h2o', repos='http://cran.rstudio.com/')\""
 
 echo "====================== installeer R studio server ====================================="
 #### Rstudio Server
 apt-get -y install libapparmor1 gdebi-core
 wget https://download2.rstudio.org/rstudio-server-0.99.902-amd64.deb
 gdebi -n rstudio-server-0.99.902-amd64.deb
+
+echo "========================== java voor h20 nodig ==========================================="
+sudo apt-get install default-jdk
+
+
+echo "=========================== MXNET ======================================================="
+apt-get install -y build-essential git libatlas-base-dev libopencv-dev
+git clone --recursive https://github.com/dmlc/mxnet
+cd mxnet; make -j$(nproc)
+
+cd R-package
+Rscript -e "library(devtools); library(methods); options(repos=c(CRAN='https://cran.rstudio.com')); install_deps(dependencies = TRUE)"
+cd ..
+make rpkg
+
+
+
