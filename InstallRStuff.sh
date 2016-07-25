@@ -1,7 +1,7 @@
 ### create some users accounts
-useradd -m -p Orion123 -s /bin/bash sasdemo1
-useradd -m -p Orion123 -s /bin/bash sasdemo2
-useradd -m -p Orion123 -s /bin/bash sasdemo3
+useradd -m -p "Orion123" -s /bin/bash "sasdemo1"
+useradd -m -p "Orion123" -s /bin/bash "sasdemo2"
+useradd -m -p "Orion123" -s /bin/bash "sasdemo3"
 
 ### installeer de webserver nginx
 apt-get update
