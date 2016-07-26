@@ -35,7 +35,14 @@ wget https://download2.rstudio.org/rstudio-server-0.99.902-amd64.deb
 gdebi -n rstudio-server-0.99.902-amd64.deb
 
 echo "========================== java voor h20 nodig ==========================================="
-sudo apt-get install default-jdk
+sudo apt-get -y install default-jdk
+
+echo "=========================== shiny server ================================================"
+su - -c "R -e \"install.packages('shiny', repos='https://cran.rstudio.com/')\""
+su - -c "R -e \"install.packages('shinydashboard', repos='https://cran.rstudio.com/')\""
+
+wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.4.2.786-amd64.deb
+gdebi -n shiny-server-1.4.2.786-amd64.deb
 
 
 echo "=========================== MXNET ======================================================="
