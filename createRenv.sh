@@ -55,5 +55,5 @@ Rscript -e "library(devtools); library(methods); options(repos=c(CRAN='https://c
 cd ..
 make rpkg
 
-
+R CMD INSTALL mxnet_0.5.tar.gz
 
