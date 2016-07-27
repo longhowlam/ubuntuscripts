@@ -1,4 +1,7 @@
 # ubuntuscripts
-Some ubuntu commands to install software from a 'fresh' ubuntu instance
+Some ubuntu commands to install software from a 'fresh' ubuntu instance. R Rstudio, packages h2o and MXNET
 
-still needs:       sed -i 's/\r$//' filename
+if problem '\r' not found then it needs
+       sed -i 's/\r$//' filename
+
+beacuse of windows to linux system.
