@@ -31,6 +31,8 @@ su - -c "R -e \"install.packages('rmarkdown', repos='http://cran.rstudio.com/')\
 su - -c "R -e \"install.packages('dplyr', repos='http://cran.rstudio.com/')\""
 su - -c "R -e \"install.packages('stringr', repos='http://cran.rstudio.com/')\""
 su - -c "R -e \"install.packages('roxygen2', repos='http://cran.rstudio.com/')\""
+su - -c "R -e \"install.packages('rvest', repos='http://cran.rstudio.com/')\""
+su - -c "R -e \"install.packages('httr', repos='http://cran.rstudio.com/')\""
 
 echo "====================== installeer R studio server ====================================="
 #### Rstudio Server
