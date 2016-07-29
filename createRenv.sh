@@ -69,3 +69,9 @@ make rpkg
 
 R CMD INSTALL mxnet_0.7.tar.gz
 
+echo "========================= TENSORFLOW ====================================================="
+sudo apt-get install python-pip 
+export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.9.0-cp27-none-linux_x86_64.whl
+sudo pip install --upgrade $TF_BINARY_URL
+
+
