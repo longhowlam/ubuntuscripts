@@ -35,6 +35,10 @@ su - -c "R -e \"install.packages('rvest', repos='http://cran.rstudio.com/')\""
 su - -c "R -e \"install.packages('httr', repos='http://cran.rstudio.com/')\""
 su - -c "R -e \"install.packages('readr', repos='http://cran.rstudio.com/')\""
 
+### package rPython, requires python development tools first
+apt-get install -y python-dev
+su - -c "R -e \"install.packages('rPython', repos='http://cran.rstudio.com/')\""
+
 
 echo "====================== installeer R studio server ====================================="
 #### Rstudio Server
