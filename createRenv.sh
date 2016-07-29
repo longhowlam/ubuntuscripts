@@ -74,4 +74,6 @@ sudo apt-get install python-pip
 export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.9.0-cp27-none-linux_x86_64.whl
 sudo pip install --upgrade $TF_BINARY_URL
 
-
+echo "=========== imager, nice package to manipulate images in R"
+sudo apt-get install -y libfftw3-dev
+su - -c "R -e \"install.packages('imager', repos='https://cran.rstudio.com/')\""
