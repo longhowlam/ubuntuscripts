@@ -34,6 +34,11 @@ su - -c "R -e \"install.packages('roxygen2', repos='http://cran.rstudio.com/')\"
 su - -c "R -e \"install.packages('rvest', repos='http://cran.rstudio.com/')\""
 su - -c "R -e \"install.packages('httr', repos='http://cran.rstudio.com/')\""
 su - -c "R -e \"install.packages('readr', repos='http://cran.rstudio.com/')\""
+su - -c "R -e \"install.packages('visNetwork', repos='http://cran.rstudio.com/')\""
+su - -c "R -e \"install.packages('glmnet', repos='http://cran.rstudio.com/')\""
+su - -c "R -e \"install.packages('rARPACK', repos='http://cran.rstudio.com/')\""
+su - -c "R -e \"install.packages('igraph', repos='http://cran.rstudio.com/')\""
+su - -c "R -e \"install.packages('plotly', repos='http://cran.rstudio.com/')\""
 
 ### package rPython, requires python development tools first
 apt-get install -y python-dev
