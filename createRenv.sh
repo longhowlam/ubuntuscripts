@@ -39,6 +39,7 @@ su - -c "R -e \"install.packages('glmnet', repos='http://cran.rstudio.com/')\""
 su - -c "R -e \"install.packages('rARPACK', repos='http://cran.rstudio.com/')\""
 su - -c "R -e \"install.packages('igraph', repos='http://cran.rstudio.com/')\""
 su - -c "R -e \"install.packages('plotly', repos='http://cran.rstudio.com/')\""
+su - -c "R -e \"install.packages('leaflet', repos='http://cran.rstudio.com/')\""
 
 ### package rPython, requires python development tools first
 apt-get install -y python-dev
